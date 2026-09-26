@@ -17,7 +17,7 @@ class Circle(Shape):
         super().__init__(color,is_filled)
         self.radius = radius 
 
-    # method overwriting - if a child shares a similar method
+    # method overriding - if a child shares a similar method
     # the childs method will be used instead of its parent's
     def describe(self):
         print(f"It is a circle with an area of {3.14 * self.radius**2}")
@@ -27,7 +27,7 @@ class Square(Shape):
         super().__init__(color,is_filled)
         self.width = width
 
-    # if you don't want to overwrite it, but use both methods (parent and child)
+    # if you don't want to override it, but use both methods (parent and child)
     # use super()
     def describe(self):
         print(f"It is a square with a area of {self.width**2}")
